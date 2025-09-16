@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Registro + Login Accesible</title>
+    <link rel="stylesheet" href="style.css" />
+<body>
+    <header class="site-header">
+    <div class="container header-inner">
+    <div class="logo">📚</div>
+    <h1 class="site-title">Ejemplo Práctico: Registro + Login Accesible</h1>
+    <p class="site-sub">Asignatura Arquitectura y Diseño Web - IESTP Recuay</p>
+    </div>
+    </header>
+
+    <main class="container">
+    <!-- Registro -->
+    <section class="card" aria-labelledby="registro-title">
+    <h2 id="registro-title" class="card-title">📝 Registro</h2>
+
+    <form id="registroForm" novalidate>
+        <label for="nombre" class="field-label">👤 Nombre completo</label>
+        <input id="nombre" name="nombre" type="text" required placeholder="Ej. Juan Pérez" class="input" />
+
+        <label for="email" class="field-label">📧 Correo electrónico</label>
+        <input id="email" name="email" type="email" required placeholder="ejemplo@dominio.com" class="input" />
+
+        <label for="password" class="field-label">🔒 Contraseña</label>
+        <input id="password" name="password" type="password" required placeholder="Mín. 6 caracteres" class="input" minlength="6" />
+
+        <button type="submit" class="btn">✅ Registrarse</button>
+    </form>
+    <div id="mensajeRegistro" class="mensaje hidden" role="status" aria-live="polite"></div>
+    </section>
+
+    <!-- Login -->
+    <section class="card" aria-labelledby="login-title">
+    <h2 id="login-title" class="card-title">🔑 Login</h2>
+
+    <form id="loginForm" novalidate>
+        <label for="loginEmail" class="field-label">📧 Correo electrónico</label>
+        <input id="loginEmail" name="loginEmail" type="email" required placeholder="ejemplo@dominio.com" class="input" />
+
+        <label for="loginPassword" class="field-label">🔒 Contraseña</label>
+        <input id="loginPassword" name="loginPassword" type="password" required placeholder="Tu contraseña" class="input" />
+
+        <button type="submit" class="btn">➡️ Ingresar</button>
+    </form>
+    <div id="mensajeLogin" class="mensaje hidden" role="status" aria-live="polite"></div>
+    </section>
+    </main>
+
+    <footer class="site-footer">
+    <div class="container">Diseñado con ♥ — IESTP Recuay - Castañeda Espinoza Luz de Maria</div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
